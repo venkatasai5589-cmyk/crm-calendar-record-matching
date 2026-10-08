@@ -1,5 +1,6 @@
 """Score candidate pairs and assign each CRM record to at most one calendar meeting."""
 
+import logging
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
@@ -7,6 +8,8 @@ from matching.config import CANDIDATE_WINDOW_DAYS, DATA_DIR, MATCH_THRESHOLD, RE
 from matching.dedupe import find_duplicate_clusters
 from matching.features import compute_signals, confidence, conflict_flags
 from matching.ingest import CalendarEvent, CrmRecord, load_calendar, load_crm
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -97,6 +100,12 @@ def run_matching(weights: dict[str, float] = WEIGHTS, data_dir: Path = DATA_DIR)
     ]
     result = MatchingResult(crm_records, calendar_events, clusters, candidates)
     result.matches = assign(candidates, clusters)
+
+    logger.debug("Duplicate calendar clusters: %s", [c for c in clusters if len(c) > 1])
+    logger.debug("Scored %d candidate pairs, assigned %d", len(candidates), len(result.matches))
+    for pair in result.matches:
+        logger.debug("%s -> %s confidence=%.3f decision=%s flags=%s",
+                     pair.crm_id, pair.calendar_id, pair.confidence, pair.decision, pair.flags)
     return result
 
 

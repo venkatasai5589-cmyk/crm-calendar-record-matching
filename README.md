@@ -15,6 +15,10 @@ uv run uvicorn api:app --reload       # API on http://127.0.0.1:8000 (interactiv
 uv run pytest                         # 19 tests
 ```
 
+Logs go to stderr: one INFO line per stage, a WARNING per record with data-quality issues, and a WARNING
+for API lookups of unknown IDs. Set `LOG_LEVEL=DEBUG` to also log every assigned pair with its
+confidence and flags.
+
 If `uv sync` fails with a hardlink error (common in OneDrive or other synced folders), use
 `uv sync --link-mode=copy`, or set `UV_LINK_MODE=copy`.
 

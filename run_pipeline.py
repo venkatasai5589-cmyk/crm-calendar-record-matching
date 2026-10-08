@@ -1,19 +1,35 @@
 """Run the whole pipeline: ingest -> match -> evaluate -> write outputs.
 
-Usage: python run_pipeline.py
+Usage: python run_pipeline.py          (set LOG_LEVEL=DEBUG for per-pair detail)
 """
 
 import json
+import logging
+import time
 
 from matching import evaluate
-from matching.config import DATA_DIR, OUTPUT_DIR, WEIGHTS
+from matching.config import DATA_DIR, OUTPUT_DIR, WEIGHTS, setup_logging
 from matching.match import run_matching, to_json
 from matching.ml_experiment import run_experiment
 from matching.report import render
 
+logger = logging.getLogger("pipeline")
+
 
 def main() -> None:
+    started = time.perf_counter()
     result = run_matching()
+    logger.info("Ingested %d CRM records and %d calendar events",
+                len(result.crm_records), len(result.calendar_events))
+    for record in [*result.crm_records, *result.calendar_events]:
+        if record.issues:
+            logger.warning("Data quality %s: %s", record.id, "; ".join(record.issues))
+
+    decisions = [p.decision for p in result.matches]
+    logger.info("Matching: %d candidate pairs scored, %d matches, %d for review, %d duplicate cluster(s)",
+                len(result.candidates), decisions.count("match"), decisions.count("review"),
+                sum(1 for c in result.duplicate_clusters if len(c) > 1))
+
     labels = evaluate.load_labels(
         DATA_DIR / "evaluation_labels.json",
         [record.id for record in result.crm_records],
@@ -48,13 +64,16 @@ def main() -> None:
     with open(OUTPUT_DIR / "evaluation.md", "w", encoding="utf-8") as file:
         file.write(render(results))
 
-    decisions = [p.decision for p in result.matches]
-    print(f"Matches: {decisions.count('match')}, needs review: {decisions.count('review')}")
-    for name in ("baseline", "rules"):
-        m = results[name]["explicit"]
-        print(f"{name:>8} on explicit labels: precision={m['precision']:.2f} recall={m['recall']:.2f} f1={m['f1']:.2f}")
-    print(f"Wrote {OUTPUT_DIR / 'matches.json'} and {OUTPUT_DIR / 'evaluation.md'}")
+    for name, scores in [("baseline", results["baseline"]["explicit"]),
+                         ("rules", results["rules"]["explicit"]),
+                         ("logistic regression (LOO)", results["ml"]["explicit_loo"])]:
+        logger.info("Evaluation %s on explicit labels: precision=%.2f recall=%.2f f1=%.2f",
+                    name, scores["precision"], scores["recall"], scores["f1"])
+    logger.info("%d predicted matches have no label and need manual review", len(results["unlabeled"]))
+    logger.info("Wrote %s and %s in %.2fs", OUTPUT_DIR / "matches.json", OUTPUT_DIR / "evaluation.md",
+                time.perf_counter() - started)
 
 
 if __name__ == "__main__":
+    setup_logging()
     main()

@@ -4,12 +4,22 @@ Weights and thresholds were chosen by reasoning about the data before the
 evaluation was run (see README, "Key decisions"). They are not fitted to the labels.
 """
 
+import logging
+import os
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
 OUTPUT_DIR = PROJECT_DIR / "output"
+
+
+def setup_logging() -> None:
+    """Log to stderr. Set LOG_LEVEL=DEBUG to see every pair and data-quality issue."""
+    logging.basicConfig(
+        level=os.environ.get("LOG_LEVEL", "INFO").upper(),
+        format="%(asctime)s %(levelname)-7s %(name)s: %(message)s",
+    )
 
 # Assumption: the firm's offices are NYC, DC and Boston, so naive timestamps are US/Eastern.
 LOCAL_TZ = ZoneInfo("America/New_York")

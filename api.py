@@ -4,17 +4,24 @@ Run: uvicorn api:app --reload
 The matcher runs once at startup; the data is small enough to keep in memory.
 """
 
+import logging
 from dataclasses import asdict
 
 from fastapi import FastAPI, HTTPException
 
+from matching.config import setup_logging
 from matching.match import run_matching, to_json
+
+setup_logging()
+logger = logging.getLogger("api")
 
 app = FastAPI(title="Record Matching API")
 result = run_matching()
 summary = to_json(result)
 crm_ids = {record.id for record in result.crm_records}
 calendar_ids = {event.id for event in result.calendar_events}
+logger.info("Loaded %d matches for %d CRM records and %d calendar events",
+            len(summary["matches"]), len(crm_ids), len(calendar_ids))
 
 
 def candidates_for(field: str, record_id: str) -> list[dict]:
@@ -36,6 +43,7 @@ def list_matches(decision: str | None = None) -> list[dict]:
 @app.get("/matches/crm/{crm_id}")
 def match_for_crm(crm_id: str) -> dict:
     if crm_id not in crm_ids:
+        logger.warning("Lookup for unknown CRM id %s", crm_id)
         raise HTTPException(status_code=404, detail=f"Unknown CRM id {crm_id}")
     return {
         "crm_id": crm_id,
@@ -48,6 +56,7 @@ def match_for_crm(crm_id: str) -> dict:
 @app.get("/matches/calendar/{event_id}")
 def match_for_calendar(event_id: str) -> dict:
     if event_id not in calendar_ids:
+        logger.warning("Lookup for unknown calendar id %s", event_id)
         raise HTTPException(status_code=404, detail=f"Unknown calendar id {event_id}")
     return {
         "calendar_id": event_id,

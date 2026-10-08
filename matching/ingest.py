@@ -5,12 +5,15 @@ data-quality issues found while normalizing it.
 """
 
 import json
+import logging
 import re
 from dataclasses import dataclass, field
 from datetime import date, datetime
 from pathlib import Path
 
 from matching.config import LOCAL_TZ, PLACEHOLDER_VALUES
+
+logger = logging.getLogger(__name__)
 
 # The first format is the expected one; the others are tolerated but flagged.
 # Assumption: ambiguous dates are month-first, as the firm is US-based.
@@ -184,9 +187,20 @@ def load_json(path: Path) -> list[dict]:
         return json.load(file)
 
 
+def log_loaded(path: Path, records: list[CrmRecord] | list[CalendarEvent]) -> None:
+    flagged = [record for record in records if record.issues]
+    logger.debug("Loaded %d records from %s (%d with data-quality issues)", len(records), path.name, len(flagged))
+    for record in flagged:
+        logger.debug("%s: %s", record.id, "; ".join(record.issues))
+
+
 def load_crm(path: Path) -> list[CrmRecord]:
-    return [parse_crm_record(raw) for raw in load_json(path)]
+    records = [parse_crm_record(raw) for raw in load_json(path)]
+    log_loaded(path, records)
+    return records
 
 
 def load_calendar(path: Path) -> list[CalendarEvent]:
-    return [parse_calendar_event(raw) for raw in load_json(path)]
+    events = [parse_calendar_event(raw) for raw in load_json(path)]
+    log_loaded(path, events)
+    return events
