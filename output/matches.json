@@ -1,0 +1,1483 @@
+{
+  "matches": [
+    {
+      "crm_id": "CRM-1001",
+      "calendar_id": "CAL-A1",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1002",
+      "calendar_id": "CAL-A2",
+      "confidence": 0.917,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.5,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Zoom - https://zoom.us/j/98765432100'"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1004",
+      "calendar_id": "CAL-A4",
+      "confidence": 0.875,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.75,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "start_time_differs_by_60_min"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1005",
+      "calendar_id": "CAL-A5",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "duplicate_calendar_cluster: ['CAL-A5', 'CAL-A6']"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1005",
+      "calendar_id": "CAL-A6",
+      "confidence": 0.938,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.875,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.5,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "start_time_differs_by_30_min",
+        "duplicate_calendar_cluster: ['CAL-A5', 'CAL-A6']"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1006",
+      "calendar_id": "CAL-A7",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1007",
+      "calendar_id": "CAL-A8",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": null,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1008",
+      "calendar_id": "CAL-A9",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1009",
+      "calendar_id": "CAL-A10",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "status_conflict: CRM cancelled, calendar 'confirmed'"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1011",
+      "calendar_id": "CAL-A12",
+      "confidence": 0.944,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1012",
+      "calendar_id": "CAL-A13",
+      "confidence": 0.944,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1013",
+      "calendar_id": "CAL-A14",
+      "confidence": 0.911,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1014",
+      "calendar_id": "CAL-A15",
+      "confidence": 0.957,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.5,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1015",
+      "calendar_id": "CAL-A16",
+      "confidence": 0.944,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1016",
+      "calendar_id": "CAL-A17",
+      "confidence": 0.917,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.5,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "start_time_differs_by_120_min"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1017",
+      "calendar_id": "CAL-A20",
+      "confidence": 0.972,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 0.5
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1018",
+      "calendar_id": "CAL-A21",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1019",
+      "calendar_id": "CAL-A22",
+      "confidence": 0.867,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    }
+  ],
+  "unmatched_crm": [
+    "CRM-1003",
+    "CRM-1010",
+    "CRM-1020"
+  ],
+  "unmatched_calendar": [
+    "CAL-A3",
+    "CAL-A11",
+    "CAL-A18",
+    "CAL-A19"
+  ],
+  "calendar_duplicate_clusters": [
+    [
+      "CAL-A5",
+      "CAL-A6"
+    ]
+  ],
+  "candidates": [
+    {
+      "crm_id": "CRM-1001",
+      "calendar_id": "CAL-A1",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1001",
+      "calendar_id": "CAL-A3",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Virtual - Microsoft Teams'",
+        "start_time_differs_by_1140_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1002",
+      "calendar_id": "CAL-A2",
+      "confidence": 0.917,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.5,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Zoom - https://zoom.us/j/98765432100'"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1002",
+      "calendar_id": "CAL-A3",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Virtual - Microsoft Teams'",
+        "start_time_differs_by_-1500_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1002",
+      "calendar_id": "CAL-A4",
+      "confidence": 0.094,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.25
+      },
+      "flags": [
+        "start_time_differs_by_1740_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1003",
+      "calendar_id": "CAL-A4",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'DC Office - Main Conference Room'",
+        "start_time_differs_by_-1440_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1003",
+      "calendar_id": "CAL-A7",
+      "confidence": 0.478,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.75,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'HQ - Room 4A'",
+        "start_time_differs_by_60_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1003",
+      "calendar_id": "CAL-A9",
+      "confidence": 0.087,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'The Capital Grille - Georgetown'",
+        "start_time_differs_by_1260_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1003",
+      "calendar_id": "CAL-A11",
+      "confidence": 0.304,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.25,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_180_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1004",
+      "calendar_id": "CAL-A2",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Zoom - https://zoom.us/j/98765432100'",
+        "start_time_differs_by_-1680_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1004",
+      "calendar_id": "CAL-A4",
+      "confidence": 0.875,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.75,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "start_time_differs_by_60_min"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1004",
+      "calendar_id": "CAL-A7",
+      "confidence": 0.125,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.333,
+        "location_similarity": 0.333
+      },
+      "flags": [
+        "start_time_differs_by_1560_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1004",
+      "calendar_id": "CAL-A11",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_1680_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1005",
+      "calendar_id": "CAL-A5",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "duplicate_calendar_cluster: ['CAL-A5', 'CAL-A6']"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1005",
+      "calendar_id": "CAL-A6",
+      "confidence": 0.938,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.875,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.5,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "start_time_differs_by_30_min",
+        "duplicate_calendar_cluster: ['CAL-A5', 'CAL-A6']"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1005",
+      "calendar_id": "CAL-A8",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Zoom'",
+        "start_time_differs_by_1680_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1005",
+      "calendar_id": "CAL-A18",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Virtual - Microsoft Teams'",
+        "start_time_differs_by_1320_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1006",
+      "calendar_id": "CAL-A4",
+      "confidence": 0.156,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 0.333
+      },
+      "flags": [
+        "start_time_differs_by_-1500_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1006",
+      "calendar_id": "CAL-A7",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1006",
+      "calendar_id": "CAL-A9",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 0.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_1200_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1006",
+      "calendar_id": "CAL-A11",
+      "confidence": 0.571,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.5,
+        "client_attending": null,
+        "owner_attending": 0.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_120_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1007",
+      "calendar_id": "CAL-A5",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": null,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'Boston Office - Room 301'"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1007",
+      "calendar_id": "CAL-A6",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": null,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'Boston Office'"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1007",
+      "calendar_id": "CAL-A8",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": null,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1007",
+      "calendar_id": "CAL-A10",
+      "confidence": 0.105,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": null,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'HQ - Boardroom'"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1007",
+      "calendar_id": "CAL-A18",
+      "confidence": 0.421,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": null,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1008",
+      "calendar_id": "CAL-A7",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_-1200_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1008",
+      "calendar_id": "CAL-A9",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1008",
+      "calendar_id": "CAL-A11",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_-1080_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1009",
+      "calendar_id": "CAL-A8",
+      "confidence": 0.133,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_-1080_min",
+        "status_conflict: CRM cancelled, calendar 'confirmed'"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1009",
+      "calendar_id": "CAL-A10",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "status_conflict: CRM cancelled, calendar 'confirmed'"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1009",
+      "calendar_id": "CAL-A18",
+      "confidence": 0.133,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_-1440_min",
+        "status_conflict: CRM cancelled, calendar 'confirmed'"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1010",
+      "calendar_id": "CAL-A10",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'HQ - Boardroom'",
+        "start_time_differs_by_-1500_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1010",
+      "calendar_id": "CAL-A12",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'NYC Office - 12th Floor'",
+        "start_time_differs_by_1380_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1010",
+      "calendar_id": "CAL-A13",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_1680_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1011",
+      "calendar_id": "CAL-A12",
+      "confidence": 0.944,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1011",
+      "calendar_id": "CAL-A13",
+      "confidence": 0.25,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Zoom - https://zoom.us/j/11223344'",
+        "start_time_differs_by_300_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1012",
+      "calendar_id": "CAL-A12",
+      "confidence": 0.25,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'NYC Office - 12th Floor'",
+        "start_time_differs_by_-300_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1012",
+      "calendar_id": "CAL-A13",
+      "confidence": 0.944,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1013",
+      "calendar_id": "CAL-A14",
+      "confidence": 0.911,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1013",
+      "calendar_id": "CAL-A15",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 0.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_1350_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1013",
+      "calendar_id": "CAL-A21",
+      "confidence": 0.133,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_1830_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1014",
+      "calendar_id": "CAL-A14",
+      "confidence": 0.087,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'HQ - Boardroom'",
+        "start_time_differs_by_-1350_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1014",
+      "calendar_id": "CAL-A15",
+      "confidence": 0.957,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.5,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1014",
+      "calendar_id": "CAL-A16",
+      "confidence": 0.087,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'Conference Room A'",
+        "start_time_differs_by_1530_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1014",
+      "calendar_id": "CAL-A21",
+      "confidence": 0.261,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_480_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1015",
+      "calendar_id": "CAL-A15",
+      "confidence": 0.087,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_-1530_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1015",
+      "calendar_id": "CAL-A16",
+      "confidence": 0.944,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.333,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1015",
+      "calendar_id": "CAL-A17",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Microsoft Teams'",
+        "start_time_differs_by_1740_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1015",
+      "calendar_id": "CAL-A21",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Zoom'",
+        "start_time_differs_by_-1050_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1016",
+      "calendar_id": "CAL-A16",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'Conference Room A'",
+        "start_time_differs_by_-1620_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1016",
+      "calendar_id": "CAL-A17",
+      "confidence": 0.917,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.5,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 1.0
+      },
+      "flags": [
+        "start_time_differs_by_120_min"
+      ],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1016",
+      "calendar_id": "CAL-A19",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'HQ - Room 4A'",
+        "start_time_differs_by_1500_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1016",
+      "calendar_id": "CAL-A20",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'The Palm Restaurant'",
+        "start_time_differs_by_1800_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1017",
+      "calendar_id": "CAL-A17",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'In-Person' vs calendar location 'Microsoft Teams'",
+        "start_time_differs_by_-1680_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1017",
+      "calendar_id": "CAL-A19",
+      "confidence": 0.611,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_-300_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1017",
+      "calendar_id": "CAL-A20",
+      "confidence": 0.972,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": 0.5
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1018",
+      "calendar_id": "CAL-A14",
+      "confidence": 0.087,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'HQ - Boardroom'",
+        "start_time_differs_by_-1830_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1018",
+      "calendar_id": "CAL-A15",
+      "confidence": 0.261,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "start_time_differs_by_-480_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1018",
+      "calendar_id": "CAL-A16",
+      "confidence": 0.0,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 0.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": null
+      },
+      "flags": [
+        "meeting_type_conflict: CRM 'Virtual' vs calendar location 'Conference Room A'",
+        "start_time_differs_by_1050_min"
+      ],
+      "decision": "no_match"
+    },
+    {
+      "crm_id": "CRM-1018",
+      "calendar_id": "CAL-A21",
+      "confidence": 1.0,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": 1.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 1.0,
+        "title_similarity": 1.0,
+        "location_similarity": null
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1019",
+      "calendar_id": "CAL-A22",
+      "confidence": 0.867,
+      "signals": {
+        "same_date": 1.0,
+        "time_proximity": 1.0,
+        "client_attending": null,
+        "owner_attending": 1.0,
+        "company_mentioned": null,
+        "title_similarity": 0.0,
+        "location_similarity": 1.0
+      },
+      "flags": [],
+      "decision": "match"
+    },
+    {
+      "crm_id": "CRM-1020",
+      "calendar_id": "CAL-A22",
+      "confidence": 0.083,
+      "signals": {
+        "same_date": 0.0,
+        "time_proximity": 0.0,
+        "client_attending": 0.0,
+        "owner_attending": 1.0,
+        "company_mentioned": 0.0,
+        "title_similarity": 0.0,
+        "location_similarity": 0.0
+      },
+      "flags": [
+        "start_time_differs_by_-1260_min"
+      ],
+      "decision": "no_match"
+    }
+  ],
+  "data_quality_issues": {
+    "CRM-1007": [
+      "missing_time"
+    ],
+    "CRM-1008": [
+      "nonstandard_date_format: '03-15/2025'"
+    ],
+    "CRM-1017": [
+      "placeholder_client_name: 'Multiple'",
+      "missing_client_name"
+    ],
+    "CAL-A4": [
+      "start_time_converted_from_utc: '2025-03-13T19:00:00Z'",
+      "end_time_converted_from_utc: '2025-03-13T20:30:00Z'"
+    ],
+    "CAL-A11": [
+      "nonstandard_end_time_format: '2025-03-14T20:00'",
+      "no_attendees"
+    ],
+    "CAL-A16": [
+      "repaired_email: 'raj.patel[at]atlasvc.com'"
+    ],
+    "CAL-A20": [
+      "invalid_attendee: 'external-guests'"
+    ]
+  }
+}

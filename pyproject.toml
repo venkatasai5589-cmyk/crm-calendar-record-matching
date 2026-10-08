@@ -1,0 +1,23 @@
+[project]
+name = "record-matching"
+version = "0.1.0"
+description = "Match CRM meeting records to calendar events, evaluate against labels, serve via REST."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "scikit-learn>=1.5",
+    "numpy>=2.0",
+    "tzdata>=2024.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "httpx>=0.27",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
